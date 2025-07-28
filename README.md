@@ -5,7 +5,7 @@
 ## **One Sentence Summary**
 This repository explores the use of Large Language Models (LLMs) like gpt-3.5-turbo to recommend books, movies, and anime based on natural language prompts, using cleaned Kaggle datasets for each media domain.
 
-## **Overview88
+## **Overview**
 This project investigates how pre-trained LLMs can function as zero-shot recommendation systems for various types of media: books, anime, and movies. Unlike traditional recommenders that rely on user-item interaction data (e.g., ratings or viewing history), this approach allows users to describe what they’re in the mood for in free-form natural language—such as “a suspenseful thriller with emotional depth and a dark atmosphere.”
 
 The pipeline consists of:
