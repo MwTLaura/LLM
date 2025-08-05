@@ -107,7 +107,9 @@ To evaluate whether the recommendations made sense given the user’s preference
 
 > **What is Cosine Similarity?**
 > Imagine every sentence (like a book synopsis or a user’s mood) as a point in a high-dimensional space. Cosine similarity measures how closely two points "point in the same direction."
-> A score of 1.0 means they’re exactly the same, 0.0 means indicates orthogonality (no similarity), and -1 indicates vectors pointing in opposite directions..
+
+> A score of 1.0 means they’re exactly the same, 0.0 means indicates orthogonality (no similarity), and -1 indicates vectors pointing in opposite directions.
+
 > This lets us ask: *"Does this summary sound like what the user is asking for?"*
 
 We computed **two types of similarity scores**:
