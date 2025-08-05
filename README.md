@@ -39,4 +39,65 @@ In our experiments:
 
 ---
 
+Great! Here's the next section, broken into all relevant parts for **Summary of Work Done**:
+
+---
+
+## Summary of Work Done
+
+### Data
+
+We used publicly available Kaggle datasets across three media categories:
+
+- **Books:** [Books Dataset](https://www.kaggle.com/datasets/abdallahwagih/books-dataset)
+- **Anime:** [Top Popular Anime](https://www.kaggle.com/datasets/tanishksharma9905/top-popular-anime)
+- **Movies:** [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?select=movies_metadata.csv)
+
+Each dataset included metadata such as title, genres, synopsis/overview, and popularity or score metrics.
+
+* **Instances:**
+
+  * Anime: \~28,000 entries
+  * Books: \~8,000 entries
+  * Movies: \~45,000 entries
+
+### Preprocessing / Clean-Up
+
+- Filtered out missing or empty descriptions
+- Retained key columns: `Title`, `Genres`, and `Synopsis/Description`
+- For each domain, created a concise dataframe (e.g., `anime_df`, `books_df`, `movies_df`) with clean entries ready for semantic embedding and prompting
+
+No heavy preprocessing or feature engineering was needed.
+
+---
+
+### Problem Formulation
+
+#### **Task**
+
+Build a zero-shot media recommender system that accepts natural language preferences and suggests an appropriate anime, book, or movie title with reasoning.
+
+#### **Input / Output**
+
+- **Input:**
+  Natural language user prompt (e.g., “I want a movive/book/anime that is sad and introspective about grief and healing”)
+
+- **Output:**
+  A single recommended item with:
+
+  * Title
+  * Genres
+  * Synopsis
+  * GPT-generated justification
+
+#### **Models & Tools**
+
+* **Embedding Model:** [`all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+  Used to create vector embeddings for user prompt and each media synopsis
+
+* **LLM:** OpenAI `gpt-3.5-turbo`
+  Used to select and explain a single best match from a top-15 shortlist
+
+---
+
 
