@@ -39,10 +39,6 @@ In our experiments:
 
 ---
 
-Great! Here's the next section, broken into all relevant parts for **Summary of Work Done**:
-
----
-
 ## Summary of Work Done
 
 ### Data
